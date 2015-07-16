@@ -1,0 +1,14 @@
+OutTerminator = LF;
+InTerminator = CR LF;
+extrainput = ignore;
+
+read {
+    out "GET \$1";
+    in "%d";
+}
+
+write {
+    out "SET \$1 %d";
+    in "OK";
+    @init { read; }
+}

@@ -1,0 +1,11 @@
+file db/mchoice.db {
+    pattern{NAME,   PORT,      DESC,        CMD,  ZRST, ZRVL}
+    {"Functino:Pin","FUNCTINO","output pin","PIN","LED",13}
+}
+
+file db/param.db {
+    pattern{NAME,        PORT,       DESC,               CMD,       EGU}
+    {"Functino:High",    "FUNCTINO", "high time",        "HIGH",    "ms"}
+    {"Functino:Low",     "FUNCTINO", "low time",         "LOW",     "ms"}
+    {"Functino:NPulses", "FUNCTINO", "number of pulses", "NPULSES", "pulses"}
+}
