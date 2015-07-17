@@ -10,7 +10,6 @@ record(ao, "$(NAME)-SP") {
     field(DESC, "Set $(DESC)")
     field(DTYP, "stream")
     field(OUT,  "@functino.proto write($(CMD)) $(PORT)")
-    field(PINI, "YES")
     field(EGU,  "$(EGU=)")
     field(FLNK, "$(NAME)-I")
 }
