@@ -27,7 +27,7 @@ static size_t trigger = 0;
 void timer (void)
 {  
   if(run)
-    if(counts++ == trigger)
+    if(++counts == trigger)
     {
       counts = 0;
       
@@ -126,9 +126,9 @@ void processMessage (char *message)
     else if(parameterStr == "LOW")     low   = value >= 0 ? value : low;
     else if(parameterStr == "NPULSES") 
     {
-      state = 0;
+      state = 1;
       counts = 0;
-      trigger = 0;
+      trigger = high;
       
       nPulses = value;
       checkPulses = nPulses > 0;
